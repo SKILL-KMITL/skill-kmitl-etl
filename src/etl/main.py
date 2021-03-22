@@ -25,7 +25,7 @@ def etl_file(cursor, connection, field, df):
     if current_position != row.position:
       logging.info('Insert position: %s' % (row.position))
       # insert position
-      position_id = insert_career_positions(cursor, connection, row.position, field_id)
+      position_id = insert_career_positions(cursor, connection, row.position, group_id)
     current_position = row.position
 
     # insert profile
