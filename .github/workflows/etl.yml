@@ -38,5 +38,5 @@ jobs:
           script: |
             cd ./deploy/etl
             echo POSTGRES_PASSWORD="${{secrets.POSTGRES_PASSWORD}}" > .env
-            echo POSTGRES_HOST="postgres" > .env
-            docker-compose up -d ---no-deps --build --force-recreate
+            echo POSTGRES_HOST="postgres" >> .env
+            docker-compose up -d --no-deps --build --force-recreate
