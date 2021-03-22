@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key : ${{ secrets.SERVER_PRIVATE }}
           source: "./"
-          target: "./deploy/etl"
+          target: "./etl"
           rm: false
           
       # Deploy
