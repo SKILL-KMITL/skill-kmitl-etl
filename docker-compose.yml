@@ -1,0 +1,20 @@
+version: '3'
+services:
+  etl:
+    build: './'
+    image: skill-kmitl/etl
+    container_name: 'etl'
+    restart: 'no'
+    networks:
+      - application_prod_network
+    volumes:
+      - ./data/source:/usr/src/app/data/source
+      - ./logs:/usr/src/app/logs
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+networks:
+  application_prod_network:
+    driver: bridge
+    name: application_prod_network
