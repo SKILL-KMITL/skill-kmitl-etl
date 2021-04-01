@@ -1,6 +1,7 @@
 **/__pycache__
 **/*.pyc
 **/.ipynb_checkpoints
+data/raw/*/
 data/source/*.h5
 logs/*.log
 .env
